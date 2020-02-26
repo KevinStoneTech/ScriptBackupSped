@@ -83,7 +83,7 @@ scp -r /var/bkp_sped/sped_$(date +%Y%m%d) root@10.78.32.25:/home/samba/backup_ge
 
 echo "---------------------------------------------------------------------------------------------------" >> /var/bkp_sped/sped_$(date +%Y%m%d)/log_backup.log
 sleep 1h
-echo "Deletando os arquivos de backup anteriores a dois dias" >> /var/bkp_sped/sped_$(date +%Y%m%d)/log_backup.log
+echo "Deletando os arquivos de backup anteriores a cinco dias" >> /var/bkp_sped/sped_$(date +%Y%m%d)/log_backup.log
 
 find /var/bkp_sped/sped* -mtime +5 -exec rm -r {} \;
 
